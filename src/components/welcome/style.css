@@ -1,0 +1,15 @@
+.texts {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.welcome {
+    color: red;
+}
+
+.auth {
+    display: flex;
+    justify-content: space-between;
+}
