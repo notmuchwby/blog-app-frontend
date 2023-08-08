@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column; 
+}
+
+input {
+    height: 32px;
+}
+
+.auth-page {
+  display: flex;
+  height: 100vh;
+}
+
+.left-side-container {
+  flex: 0 0 20%; /* The left-side container will take 30% of the width but won't shrink */
+  max-width: 20%; /* Add this to prevent the left side from expanding more than 30% */
+  min-width: 250px; /* Set a minimum width for the left side */
+}
+
+.left-side {
+  padding: 20px;
+  background-color: #f0f0f0; /* Optional: Add a background color to the left side */
+  height: 100%;
+}
+
+.right-side-container {
+  flex: 0 0 80%; /* The right side will take 70% of the width but won't shrink */
+  max-width: 80%; /* Add this to prevent the right side from expanding more than 70% */
+  min-width: 550px; /* Set a minimum width for the right side */
+}
+
+.right-side {
+  padding: 20px;
+  background-color: #d6d6d6; /* Optional: Add a background color to the left side */
+  height: 100%;
+}
+
+.login-container { 
+    display: flex;
+    flex-direction: column;
+}
+
+.password-container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .auth-page {
+    flex-direction: column; /* Change to a single column layout on smaller screens */
+  }
+
+  .left-side-container,
+  .right-side {
+    flex: 0 0 100%; /* Both left and right sides take 100% of the width on smaller screens */
+    max-width: 100%; /* Add this to prevent any side from expanding more than 100% */
+    min-width: auto; /* Reset the min-width for mobile devices */
+  }
+
+  .right-side,
+  .left-side {
+    width: 100%;
+  }
+}
