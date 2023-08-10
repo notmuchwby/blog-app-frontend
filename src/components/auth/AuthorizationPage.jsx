@@ -30,46 +30,31 @@ const AuthorizatitonPage = () => {
     
     return (
         <div className='auth-page'> 
-            <div className='left-side-container'>
-                <div className='left-side'>
-                     <h2>
-                         Log into your account
-                     </h2>
-            
-                     <form onSubmit={handleSubmit}>
-                         <div className='login-container'>
-                             <label>Enter your login: </label>
-                             <input value={login} type="text" onChange={e => setLogin(e.target.value)}/>
-                         </div>
-            
-                         <div className='password-container'>
-                             <label>Enter your password: </label>
-                             <input value={password} type="text" onChange={e => setPassword(e.target.value)}></input>
-                         </div>
-            
-                         <div>
-                             <button type="submit">Submit</button>
-                         </div>
-                     </form>
-            
-                     {errorMessage && 
-                     <div>
-                         {errorMessage}
-                     </div>}
-                </div>
-            </div>
+             <h2>
+                 Log into your account
+             </h2>
+    
+             <form onSubmit={handleSubmit}>
+                 <div className='login-container'>
+                     <label>Enter your login: </label>
+                     <input value={login} type="text" onChange={e => setLogin(e.target.value)}/>
+                 </div>
+    
+                 <div className='password-container'>
+                     <label>Enter your password: </label>
+                     <input value={password} type="text" onChange={e => setPassword(e.target.value)}></input>
+                 </div>
+    
+                 <div className='button-container'>
+                     <button type="submit">Submit</button>
+                 </div>
+             </form>
+    
+             {errorMessage && 
+             <div style={{marginTop: '24px', color: 'red'}}>
+                 {errorMessage}
+             </div>}
 
-
-           <div className='right-side-container'>
-                <div className='right-side'>
-                    <div>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                        Odio incidunt inventore cumque, sequi velit ipsa natus minima consequuntur magni,
-                        nihil hic beatae ad reiciendis facere quaerat voluptatibus.
-                        Omnis, inventore eos.
-                    </div>
-                </div>
-           </div>
         </div>
     )
 
